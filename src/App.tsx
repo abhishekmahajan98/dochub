@@ -1,10 +1,13 @@
 import './App.css'
+import ChatArea from './components/ChatArea'
+import Sidebar from './components/Sidebar'
 
 function App() {
 
   return (
     <>
-      <p>Chat app</p>
+      {/* <Sidebar/> */}
+      <ChatArea/>
     </>
   )
 }
