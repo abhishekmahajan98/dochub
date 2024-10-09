@@ -4,7 +4,7 @@ function ChatArea() {
   return (
     <div className="chat-main-area">
         <div className="chat-nav">
-            <p>Legal</p>
+            <p>Sherlock</p>
             <img src={assets.user_icon}></img>
         </div>
         <div className="chat-main-container">
