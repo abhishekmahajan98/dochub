@@ -12,7 +12,7 @@ class UserQuery(BaseModel):
 # Dictionary to store conversation history for each user and thread
 conversation_history: Dict[str, Dict[str, List[Dict[str, str]]]] = {}
 
-@app.post("/chat/{user_id}/{thread_id}")
+@app.post("/api/v1/chat/{user_id}/{thread_id}")
 async def chat(user_id: str, thread_id: str, body: UserQuery = Body(...)):
     # Initialize conversation history for this user and thread if it doesn't exist
     if user_id not in conversation_history:

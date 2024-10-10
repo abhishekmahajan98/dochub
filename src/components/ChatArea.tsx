@@ -1,6 +1,17 @@
+import { useEffect } from 'react'
 import {assets} from '../assets/assets'
 import './ChatArea.css'
+import { fetchQueryResponse } from '../services/api_calls'
+
 function ChatArea() {
+    useEffect(()=>{
+        const fetchData = async()=>{
+            console.log("fethcing query response")
+            const data = await fetchQueryResponse({query:"who is an authorized person?"});
+            console.log(data)
+        }
+        fetchData();
+    },[]);
   return (
     <div className="chat-main-area">
         <div className="chat-nav">
